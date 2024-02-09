@@ -1,0 +1,132 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+
+header{
+    display: block;
+    background-color: beige;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+header h1{
+    font-size: x-large;
+}
+
+nav{
+    
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    display: block;
+    padding: 14px 16px;
+    text-decoration-line: none;
+    color: black;
+}
+
+nav a:hover{
+    background-color: rgb(236, 236, 197);
+    color: rgb(252, 160, 21);
+}
+
+article {
+    border: 3px solid black;
+    border-radius: 20px;
+    min-height: 100vh;
+    margin: 40px;
+    padding: 5px;
+    background-color: aquamarine;
+    box-shadow: 5px 8px 20px;
+
+    animation-name: animation1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+
+figure{
+    text-align: center;
+}
+
+figure img{
+    min-height: auto;
+    max-height: 200px;
+    height: 100%;
+    min-width: 100px;
+    max-width: max-content;
+    width: 100%;
+    box-shadow: 10px 8px 8px;
+    border-radius: 10px;
+}
+
+article ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+}
+
+article li{
+    border: 2px solid;
+}
+
+@media screen and (min-width:783px) {
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+
+    header h1{
+        margin-inline-end: auto;
+        margin-left: 10px;
+    }
+
+    nav ul{
+        overflow: hidden;
+    }
+    nav li{
+        float: left;
+    }
+
+    nav a{
+        margin: 0;
+        padding: 15px 16px;
+    }
+
+    article:nth-child(1){
+        margin-top: 0px;
+        padding-top: 40px;
+    }
+}
+
+@keyframes animation1 {
+    from{
+        left: 100px;
+        opacity: 0;
+    }
+    to{
+        left: 0px;
+        opacity: 1;
+    }
+}
